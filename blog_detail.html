@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Blog</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome-4.2.0/css/font-awesome.min.css">
+    
+    <!-- simple sidebar-->
+    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+    
+    
+    <!-- Template 21 -->
+     <link href="assets/general.css" rel="stylesheet">
+    
+    
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/docs.min.js"></script> 
+    <script src="assets/general.js"></script>
+    
+    <!-- syntaxhighlighter -->
+    
+<link type="text/css" rel="stylesheet" href="assets/plugins/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shCore.js"></script>
+
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+
+
+
+<script language="javascript">
+$(document).ready(function(){
+
+//dp.SyntaxHighlighter.BloggerMode();
+dp.SyntaxHighlighter.HighlightAll('code');
+
+ 
+
+});
+</script>
+    
+      <!-- syntaxhighlighter -->  
+     
+     
+     
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-logo" href="#"><i class="fa fa-smile-o"></i>Template21</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          
+          	<li>
+          		<div class="pull-left image">
+                            <img src="img/zaz-talents.jpg" class="img-circle"  width=90 alt="User Image">
+                        </div>
+            </li>
+            <li>
+            <div class="pull-left info">
+                            <p class="text-fuchsia">Hello, Zaz</p>
+
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+            
+            </li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+	       	<li><a href="#">Help</a></li>
+	       	
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i> <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#">My Account</a></li>
+	            <li><a href="#">My settings</a></li>
+	            <li><a href="#">Mails</a></li>
+	            <li class="divider"></li>
+	            <li><a href="#"><i class="fa fa-sign-out"></i> Logout</a></li>
+	          </ul>
+	        </li>
+          </ul>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        
+        <div class="col-md-2 ">
+        
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+            
+            <li class="sidebar-brand"><a href="#">Menu</a></li>
+               
+            <li><a href="dashboard.html"> <i class="fa fa-home"></i>   Dashboard</a></li>
+            <li><a href="panels.html"><i class="fa fa-square-o"></i> Grid & Panels</a></li>
+            <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
+            <li><a href="forms.html"><i class="fa fa-check-square-o"></i> Forms</a></li>
+            <li><a href="validator.html"><i class="fa fa-check"></i> Form Validator</a></li>
+            <li><a href="ploting.html"><i class="fa fa-bar-chart"></i> Chart & Graph</a></li>
+           	<li><a href="maps.html"><i class="fa fa-map-marker"></i> Maps</a></li>
+           	<li><a href="listview.html"><i class="fa fa-bars"></i> List view</a></li>
+           	
+           	<li class="sidebar-brand active"><a href="#">UI Element</a></li>
+            <li><a href="icons_buttons.html"><i class="fa fa-circle-o"></i> icons & Buttons</a></li>
+            <li><a href="images.html"><i class="fa fa-image"></i> images</a></li>
+            <li><a href="typography.html"><i class="fa fa-circle-o"></i> Topography</a></li>
+            <li><a href="slider.html"><i class="fa fa-circle-o"></i> slider</a></li>
+            <li><a href="notifications.html"><i class="fa fa-circle-o"></i> Notifications</a></li>
+            <li><a href="group_list.html"><i class="fa fa-circle-o"></i> Group list</a></li>
+            <li><a href="modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li><a href="tabs_wizards.html"><i class="fa fa-circle-o"></i> Tabs & Wizards</a></li>
+           	
+            <li class="sidebar-brand"><a href="#">Components</a></li>
+            <li><a href="calender.html"><i class="fa fa-calendar"></i> Calendar</a></li>
+            <li><a href="mailbox.html"><i class="fa fa-envelope"></i> Mailbox</a></li>
+            <li><a href="chat.html"><i class="fa fa-wechat"></i> Chat</a></li>
+            <li><a href="galery.html"><i class="fa fa-photo"></i> Galery</a></li>
+            <li><a href="blog.html" class="active"><i class="fa fa-folder-o"></i> Blog</a></li>
+           
+            <li class="sidebar-brand"><a href="#">Pages</a></li>
+            <li><a href="blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Invoice</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Login</a></li>
+            <li><a href=""><i class="fa fa-circle-o"></i> Register</a></li>
+              
+          </ul>
+       
+        </div>
+        <!-- /#sidebar-wrapper -->
+       
+        </div>
+        
+        <div class=" col-md-10 content">
+          <h1 class="page-header"> <i class="fa fa-folder-o"></i> Blog</h1>
+			<ol class="breadcrumb">
+			  <li><a href="dashboard.html">Dashboard</a></li>
+			  <li class="active">Blog</li>
+			</ol>
+			
+			
+			<div class="row">
+			
+				<div class="col-md-10 col-md-offset-1 bg-plotm2 padding round "> 
+				
+											<div class="col-md-3 pull-right">
+  
+												<div class="col-md-3"><a href="#"><img class="img-responsive  img-thumbnail" src="img/icons/social/facebook.ico"></a> </div>
+												
+												<div class="col-md-3"><a href="#"> <img class="img-responsive img-thumbnail" src="img/icons/social/tweeter.ico"></a> </div>
+												
+												<div class="col-md-3"><a href="#"> <img class="img-responsive img-thumbnail" src="img/icons/social/linked.ico"></a> </div>
+												
+												<div class="col-md-3"><a href="#"> <img class="img-responsive img-thumbnail" src="img/icons/social/google.ico"></a> </div>
+												  
+											  
+											</div>
+				<img class="img-responsive img-circle center-block col-md-2" src="img/zaz-talents.jpg" > 	<h1 class="text-white"><i class="fa fa-paint-brush"></i>  ZAZ Blog <small> Slogan Here </small></h1>  
+				
+				</div>
+				<div class="clearfix"></div>
+				<br>
+			
+				
+				<div class="col-md-8 col-md-offset-1 pull-left">
+				
+				<div class="row">
+				
+				
+					<div class="col-md-12 ">
+					<ol class="breadcrumb">
+					  <li><a href="blog.html">Home</a></li>
+					  <li><a href="#">CSS</a></li>
+					  <li class="active"> Developing a jQuery plugin example</li>
+					</ol>
+					</div>
+					
+					<div class="col-md-12">
+					
+						 
+							<div class="blog-body padding margin">
+							
+							<h1 class="blog-title plotm1"> Developing a jQuery plugin example</h1>
+							<small class="plotm7"> 
+								21 January 2021  | <a href="#"><i class="fa fa-comment"></i>  Commets (9)</a>| <a href="#"> <i class="fa fa-user"></i> by Muslum ÇEN </a>
+							</small>
+							
+							<div class="blog-content padding">
+							
+							
+								<img src="img/zaz.jpg" class="img-responsive image-rounded col-md-4">
+								<p>I'm in Section 1.<br>
+			
+									It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+								</p>
+								<div class="clearfix"></div>
+								
+								<br>
+								<pre name="code" class="js"> 
+								
+									$.fn.serializeObject = function()
+									{
+									 var o = {};
+									 var a = this.serializeArray();
+									 $.each(a, function() {
+									 if (o[this.name] !== undefined) {
+									 if (!o[this.name].push) {
+									 o[this.name] = [o[this.name]];
+									 }
+									 o[this.name].push(this.value || '');
+									 } else {
+									 o[this.name] = this.value || '';
+									 }
+									 });
+									 return o;
+									};
+								
+								
+								</pre>
+								<div class="col-md-12"><a href="#" class="btn btn-primary btn-xs pull-right">Read More</a> </div>
+							</div>
+							
+							</div>
+							
+						   
+						   <div class="clearfix"></div>
+						
+						   
+				<div class="col-md-12">
+			  		<div class="box box-info">
+					  <div class="box-header">
+						<h3 class="box-title"><i class="fa fa-comment"></i> <span class=" text-navy">  Commet</span></h3>
+					  </div>
+					  <div class="box-body">
+						
+							<ul class="media-list">
+							      <li class="media">
+							        <a class="pull-left" href="#">
+							          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" style="width: 64px; height: 64px;">
+							        </a>
+							        <div class="media-body">
+							          <h4 class="media-heading">Media heading</h4>
+							          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+							          <!-- Nested media object -->
+							          <div class="media">
+							            <a class="pull-left" href="#">
+							              <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" style="width: 64px; height: 64px;">
+							            </a>
+							            <div class="media-body">
+							              <h4 class="media-heading">Nested media heading</h4>
+							              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+							              <!-- Nested media object -->
+							              <div class="media">
+							                <a class="pull-left" href="#">
+							                  <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" style="width: 64px; height: 64px;">
+							                </a>
+							                <div class="media-body">
+							                  <h4 class="media-heading">Nested media heading</h4>
+							                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+							                </div>
+							              </div>
+							            </div>
+							          </div>
+							          <!-- Nested media object -->
+							          <div class="media">
+							            <a class="pull-left" href="#">
+							              <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" style="width: 64px; height: 64px;">
+							            </a>
+							            <div class="media-body">
+							              <h4 class="media-heading">Nested media heading</h4>
+							              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+							            </div>
+							          </div>
+							        </div>
+							      </li>
+							      <li class="media">
+							        <a class="pull-right" href="#">
+							          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" style="width: 64px; height: 64px;">
+							        </a>
+							        <div class="media-body">
+							          <h4 class="media-heading">Media heading</h4>
+							          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+							        </div>
+							      </li>
+							      
+							      <li class="media">
+							        <a class="pull-left" href="#">
+							          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" style="width: 64px; height: 64px;">
+							        </a>
+							        <div class="media-body">
+							          <h4 class="media-heading">Media heading</h4>
+							          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+							        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+							        </div>
+							      </li>
+							      <li class="media">
+							        <a class="pull-left" href="#">
+							          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" style="width: 64px; height: 64px;">
+							        </a>
+							        <div class="media-body">
+							          <h4 class="media-heading">Media heading</h4>
+							          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+							        </div>
+							      </li>
+							      <li class="media">
+							        <a class="pull-left" href="#">
+							          <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiBmaWxsPSIjZWVlIi8+PHRleHQgdGV4dC1hbmNob3I9Im1pZGRsZSIgeD0iMzIiIHk9IjMyIiBzdHlsZT0iZmlsbDojYWFhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjEycHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NjR4NjQ8L3RleHQ+PC9zdmc+" style="width: 64px; height: 64px;">
+							        </a>
+							        <div class="media-body">
+							          <h4 class="media-heading">Media heading</h4>
+							          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+							        </div>
+							      </li>
+							      
+							    </ul>
+					  
+					  
+					  </div>
+					</div>
+				</div>
+					
+					
+					</div>
+					
+					
+					
+				</div>
+				</div>
+			
+				<div class="col-md-2 pull-left">
+				
+								<div class="row padding">
+								     	<div class="input-group">
+	                                        <input type="text" class="form-control">
+	                                        <span class="input-group-addon"><i class="fa fa-search"></i></span>
+	                                    </div>
+	                                    </br>
+	                                    
+	                                    <div class="row bg-plotm2 round" ><h4 class="text-center text-white">Category</h4></div>
+									    </br>
+									    <div class="clearfix"></div>
+									    
+								     	<ul class="list-group">
+										
+									      <a href="#" class="list-group-item">
+									        <span class="badge bg-navy">14</span>
+									        HTML
+									      </a>
+									      <!-- active class  bg-plotm2 -->
+									      <a href="#" class="list-group-item active">
+									        <span class="badge bg-white">21</span>
+									       	CSS
+									      </a>
+									      <a href="#" class="list-group-item">
+									        <span class="badge bg-navy">116</span>
+									        PHP
+									      </a>
+									      <a href="#" class="list-group-item">
+									        <span class="badge bg-navy">12</span>
+									        LINUX
+									      </a>
+									      
+									      <a href="#" class="list-group-item">
+									        <span class="badge bg-navy">14</span>
+									        MYSQL
+									      </a>
+									      
+									      <a href="#" class="list-group-item">
+									        <span class="badge bg-navy">15</span>
+									        PHYTON
+									      </a>
+									    </ul>		
+								    </div>
+								    <hr>
+								    <div class="clearfix"></div>
+								    
+								    <div class="row padding">
+								    	
+								    <div class="row bg-plotm2 round" ><h4 class="text-center text-white">About</h4></div>
+								    </br>
+								    <div class="clearfix"></div>
+								    
+									    <img   class="img-responsive img-thumbnail center-block" src="img/zaz-talents.jpg" >
+									    <p class="text-center">Hi I am <b>ZAZ</b></p>
+									    	<div class="row">
+  
+												<div class="col-md-3"><a href="#"><img class="img-responsive  img-thumbnail" src="img/icons/social/facebook.ico"></a> </div>
+												
+												<div class="col-md-3"><a href="#"> <img class="img-responsive img-thumbnail" src="img/icons/social/tweeter.ico"></a> </div>
+												
+												<div class="col-md-3"><a href="#"> <img class="img-responsive img-thumbnail" src="img/icons/social/linked.ico"></a> </div>
+												
+												<div class="col-md-3"><a href="#"> <img class="img-responsive img-thumbnail" src="img/icons/social/google.ico"></a> </div>
+												  
+											  
+											</div>
+									    
+									    
+									    
+									    <em>It is a long established fact that a reader will be distracted by the readable content of a page
+									     when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters. 
+									     </em>
+								    </div>
+								    
+								    
+								    
+								    
+								    		     	
+				</div>
+			
+			</div>
+					
+			
+          
+        </div>
+      </div>
+      
+      
+    </div>
+
+   
+  </body>
+</html>

@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Forms</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.2.0/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome-4.2.0/css/font-awesome.min.css">
+    
+    <!-- simple sidebar-->
+    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+    
+    
+    <!-- Template 21 -->
+     <link href="assets/general.css" rel="stylesheet">
+     
+
+     
+	   <!--<link href="assets/plugins/iCheck-master/css/custom.css?v=1.0.2" rel="stylesheet">-->
+	  <link href="assets/plugins/iCheck-master/skins/all.css?v=1.0.2" rel="stylesheet">
+  
+  
+  		<!-- daterange picker -->
+        <link href="assets/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Bootstrap Color Picker -->
+        <link href="assets/plugins/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet"/>
+        <!-- Bootstrap time Picker -->
+        <link href="assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet"/>
+ 
+  
+  <!-- JS -->
+  
+         <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    	<script src="assets/js/jquery.min-1.11.1.js"></script>
+	    <script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
+	    <script src="assets/js/docs.min.js"></script>
+	    <script src="assets/general.js"></script>
+	    
+	    
+	  <script src="assets/plugins/iCheck-master/icheck.js?v=1.0.2"></script>
+	  <script src="assets/plugins/iCheck-master/demo/js/custom.min.js?v=1.0.2"></script>
+	  
+	  <script src="assets/plugins/input-mask/jquery.inputmask.js" type="text/javascript"></script>
+	  <script src="assets/plugins/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
+	  <script src="assets/plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
+  
+   		<!-- date-range-picker -->
+        <script src="assets/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+        <!-- bootstrap color picker -->
+        <script src="assets/plugins/colorpicker/bootstrap-colorpicker.min.js" type="text/javascript"></script>
+        <!-- bootstrap time picker -->
+        <script src="assets/plugins/timepicker/bootstrap-timepicker.min.js" type="text/javascript"></script>
+
+        
+<!-- syntaxhighlighter -->
+    
+<link type="text/css" rel="stylesheet" href="assets/plugins/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shCore.js"></script>
+
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+
+
+
+<script language="javascript">
+$(document).ready(function(){
+
+//dp.SyntaxHighlighter.BloggerMode();
+dp.SyntaxHighlighter.HighlightAll('code');
+
+ 
+
+});
+</script>
+    
+<!-- syntaxhighlighter -->  
+        
+        
+<!-- Slider -->
+     
+      <link href="assets/plugins/ion.rangeSlider-1.9.2/css/normalize.min.css" rel="stylesheet"/>
+      <link rel="stylesheet" href="assets/plugins/ion.rangeSlider-1.9.2/css/ion.rangeSlider.css" />
+   	  <link rel="stylesheet" href="assets/plugins/ion.rangeSlider-1.9.2/css/ion.rangeSlider.skinFlat.css" />
+    
+      <script src="assets/plugins/ion.rangeSlider-1.9.2/js/ion-rangeSlider/ion.rangeSlider.min.js" type="text/javascript"></script>
+  
+		<script type="text/javascript">
+			    $(document).ready(function(){
+			
+			        $("#slider").ionRangeSlider({
+			            min: 0,
+			            max: 5000,
+			            from: 1000,
+			            to: 4000,
+			            type: 'double',
+			            step: 1,
+			            prefix: "$",
+			            prettify: true,
+			            hasGrid: true
+			        });
+
+			
+			    });
+			</script>
+
+<!-- Slider -->
+		
+	
+  <script type="text/javascript">
+  
+$(document).ready(function(){
+	
+  $('input.minimal').iCheck({
+    checkboxClass: 'icheckbox_minimal',
+    radioClass: 'iradio_minimal',
+    increaseArea: '20%' // optional
+  });
+
+  $('input.minimal-red').iCheck({
+	    checkboxClass: 'icheckbox_minimal',
+	    radioClass: 'iradio_minimal-red',
+	    increaseArea: '20%' // optional
+	  });
+
+  $('input.flat').iCheck({
+	    checkboxClass: 'icheckbox_flat',
+	    radioClass: 'iradio_flat'
+	  });
+
+  $('input.flat-red').iCheck({
+	    checkboxClass: 'icheckbox_flat-red',
+	    radioClass: 'iradio_flat-red'
+	  });
+
+
+  $('input.line').each(function(){
+	    var self = $(this),
+	      label = self.next(),
+	      label_text = label.text();
+
+	    label.remove();
+	    self.iCheck({
+	      checkboxClass: 'icheckbox_line',
+	      radioClass: 'iradio_line',
+	      insert: '<div class="icheck_line-icon"></div>' + label_text
+	    });
+	  });
+
+  $('input.line-red').each(function(){
+	    var self = $(this),
+	      label = self.next(),
+	      label_text = label.text();
+
+	    label.remove();
+	    self.iCheck({
+	      checkboxClass: 'icheckbox_line-red',
+	      radioClass: 'iradio_line-red',
+	      insert: '<div class="icheck_line-icon"></div>' + label_text
+	    });
+	  });
+  $('input.line-blue').each(function(){
+	    var self = $(this),
+	      label = self.next(),
+	      label_text = label.text();
+
+	    label.remove();
+	    self.iCheck({
+	      checkboxClass: 'icheckbox_line-blue',
+	      radioClass: 'iradio_line-blue',
+	      insert: '<div class="icheck_line-icon"></div>' + label_text
+	    });
+	  });
+
+  $('input.line-purple').each(function(){
+	    var self = $(this),
+	      label = self.next(),
+	      label_text = label.text();
+
+	    label.remove();
+	    self.iCheck({
+	      checkboxClass: 'icheckbox_line-purple',
+	      radioClass: 'iradio_line-purple',
+	      insert: '<div class="icheck_line-icon"></div>' + label_text
+	    });
+	  });
+  
+  
+});
+</script>
+  
+   <script type="text/javascript">
+            $(function() {
+                //Datemask dd/mm/yyyy
+                $("#datemask").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+                //Datemask2 mm/dd/yyyy
+                $("#datemask2").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+                //Money Euro
+                $("[data-mask]").inputmask();
+
+                //Date range picker
+                $('#reservation').daterangepicker();
+                //Date range picker with time picker
+                $('#reservationtime').daterangepicker({timePicker: true, timePickerIncrement: 30, format: 'MM/DD/YYYY h:mm A'});
+                //Date range as a button
+                $('#daterange-btn').daterangepicker(
+                        {
+                            ranges: {
+                                'Today': [moment(), moment()],
+                                'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                                'Last 7 Days': [moment().subtract('days', 6), moment()],
+                                'Last 30 Days': [moment().subtract('days', 29), moment()],
+                                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                                'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                            },
+                            startDate: moment().subtract('days', 29),
+                            endDate: moment()
+                        },
+                function(start, end) {
+                    $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+                }
+                );
+
+                //iCheck for checkbox and radio inputs
+                $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+                    checkboxClass: 'icheckbox_minimal',
+                    radioClass: 'iradio_minimal'
+                });
+                //Red color scheme for iCheck
+                $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+                    checkboxClass: 'icheckbox_minimal-red',
+                    radioClass: 'iradio_minimal-red'
+                });
+                //Flat red color scheme for iCheck
+                $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+                    checkboxClass: 'icheckbox_flat-red',
+                    radioClass: 'iradio_flat-red'
+                });
+
+                //Colorpicker
+                $(".my-colorpicker1").colorpicker();
+                //color picker with addon
+                $(".my-colorpicker2").colorpicker();
+
+                //Timepicker
+                $(".timepicker").timepicker({
+                    showInputs: false
+                });
+            });
+        </script>
+
+   
+   <!-- Bootstarp Toggle -->
+   
+<link href="assets/plugins/bootstrap-toggle-master/css/bootstrap-toggle.min.css" rel="stylesheet">
+<script src="assets/plugins/bootstrap-toggle-master/js/bootstrap-toggle.min.js"></script>
+   
+      <!-- Bootstarp Toggle -->
+   
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-logo" href="dashboard.html"><i class="fa fa-smile-o"></i>Template21</a>
+          <small class="plotm3">Admin Panel</small>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          
+            <li><a href="dashboard.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+            <li class="dropdown ">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-triangle text-red"></i> <span class="badge bg-red">21</span> <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu" style="width: 300px; height: 277px; overflow-y: scroll;">
+						
+							<div class="alert alert-danger" role="alert">
+						      <strong>404 page not found !</strong> in index page.
+						    </div>
+						    <div class="alert alert-warning" role="alert">
+						      <strong>Warning!</strong> Mail was not send.
+						    </div>
+						    <div class="alert alert-success" role="alert">
+						      <strong>Well done!</strong> You successfully read this important alert message.
+						    </div>
+						    <div class="alert alert-info" role="alert">
+						      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+						    </div>
+						    <div class="alert alert-warning" role="alert">
+						      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+						    </div>
+						    <div class="alert alert-danger" role="alert">
+						      <strong>404 page not found !</strong> Change a few things up and try submitting again.
+						    </div>
+				
+	          </ul>
+	        </li>
+	       	<li><a href="#"><i class="fa fa-question"></i> Help</a></li>
+	       	
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#"><i class="fa fa-user text-red"></i> My Profile</a></li>
+	            <li><a href="#"><i class="fa fa-cog text-red"></i> My settings</a></li>
+	            <li><a href="#"> <i class="fa fa-envelope text-red"></i> My Mail <span class="badge bg-red">21</span></a></li>
+	            <li class="divider"></li>
+	            <li><a href="#"><i class="fa fa-sign-out text-red"></i> Logout</a></li>
+	          </ul>
+	        </li>
+          </ul>
+        
+        </div>
+      </div>
+    </div>
+  
+    <div class="container-fluid">
+      <div class="row">
+    
+        <div class="col-md-2 col-sm-4 no-padding">
+        
+        <!-- Sidebar -->
+         <div class="col-md-10 no-padding menu-template21 bg-black">
+			          
+			         <br>
+			        <div class="col-md-12">
+	          				<div class="pull-left image">
+	                            <img src="img/zaz-talents.jpg" class="img-circle" width="90" alt="User Image">
+	                        </div>
+	                        <div class="pull-left info">
+	                            <p class="text-red">Hello, Zaz</p>
+	
+	                            <i class="fa fa-circle text-success"></i><a href="#" class="text-white"> Online</a>
+	                        </div>
+            		</div>
+            			<div class="clearfix"></div>
+			         
+								<ul class="col-md-12 dropdown-t21 no-padding">
+								
+								 <li class="col-md-12 no-padding"><hr></li>
+		                          
+							    <li class="col-md-12 no-padding "><a href="dashboard.html" class="col-md-12 text-menua"> <i class="fa fa-home"></i> Dashboard</a></li>
+					            <li class="col-md-12 no-padding"><a href="panels.html" class="col-md-12 text-menua"><i class="fa fa-square-o"></i> Grid & Panels</a></li>
+					            <li class="col-md-12 no-padding"><a href="tables.html" class="col-md-12 text-menua"><i class="fa fa-table"></i> Tables</a></li>
+					            <li class="col-md-12 no-padding menu_active"><a href="forms.html" class="col-md-12 text-menua"><i class="fa fa-check-square-o"></i> Forms</a> </li>
+					            <li class="col-md-12 no-padding"><a href="validator.html" class="col-md-12 text-menua"><i class="fa fa-check"></i> Form Validator & Wizard</a></li>
+					            <li class="col-md-12 no-padding"><a href="ploting.html" class="col-md-12 text-menua"><i class="fa fa-bar-chart"></i> Chart & Graph</a></li>
+					           	<li class="col-md-12 no-padding"><a href="maps.html" class="col-md-12 text-menua"><i class="fa fa-map-marker"></i> Maps</a></li>
+							                          
+		                          <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> UI ELEMENTS<i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+				                              	<li class="col-md-12 no-padding"><a href="icons_buttons.html" class="col-md-12 text-menua"><i class="fa fa-angellist"></i> icons & Buttons</a></li>
+									            <li class="col-md-12 no-padding"><a href="images.html" class="col-md-12 text-menua"><i class="fa fa-image"></i> images</a></li>
+									            <li class="col-md-12 no-padding"><a href="typography.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Topography</a></li>
+									            <li class="col-md-12 no-padding"><a href="slider.html" class="col-md-12 text-menua"><i class="fa fa-arrows-h"></i> slider</a></li>
+									            <li class="col-md-12 no-padding"><a href="notifications.html" class="col-md-12 text-menua"><i class="fa fa-warning"></i> Notifications</a></li>
+									            <li class="col-md-12 no-padding"><a href="drag_drop_sortable.html" class="col-md-12 text-menua"><i class="fa fa-bars""></i> Drag & Drop & Sortable</a></li>
+									            <li class="col-md-12 no-padding"><a href="group_list.html" class="col-md-12 text-menua"><i class="fa fa-bars""></i> Group list</a></li>
+									            <li class="col-md-12 no-padding"><a href="modals.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Modals</a></li>
+									            <li class="col-md-12 no-padding"><a href="tabs_wizards.html" class="col-md-12 text-menua"><i class="fa fa-th"></i> Tabs & Wizards & Accordion</a></li>
+													                             
+				                            </ul>
+		                          </li>
+		                          
+		                           <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> COMPONENTS <i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+												<li class="col-md-12 no-padding"><a href="calender.html" class="col-md-12 text-menua"><i class="fa fa-calendar"></i> Calendar</a></li>
+									            <li class="col-md-12 no-padding"><a href="mailbox.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mailbox<i class="fa fa-angle-down col-md-1 text-menua pull-right"></i></a>
+									            
+												       <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+														
+												            <li class="col-md-12 no-padding"><a href="mail_compose.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mail Compose</a></li>
+												            <li class="col-md-12 no-padding"><a href="mail_detail.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mail Detail</a></li>	
+												            									                             
+							                            </ul>
+									            </li><li class="col-md-12 no-padding"><a href="chat.html" class="col-md-12 text-menua"><i class="fa fa-wechat"></i> Chat</a></li>
+									            <li class="col-md-12 no-padding"><a href="galery.html" class="col-md-12 text-menua"><i class="fa fa-photo"></i> Galery</a></li>
+									            <li class="col-md-12 no-padding"><a href="blog.html" class="col-md-12 text-menua"><i class="fa fa-folder-o"></i> Blog</a></li>
+									            <li class="col-md-12 no-padding"><a href="file_manager.html" class="col-md-12 text-menua"><i class="fa fa-file"></i> File Manager</a></li>
+																						                             
+				                            </ul>
+		                          </li>
+		                          <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> PAGES <i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+				                              	
+									            <li class="col-md-12 no-padding"><a href="blank.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+									            <li class="col-md-12 no-padding"><a href="page_404.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> 404 Page</a></li>
+									            <li class="col-md-12 no-padding"><a href="login.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Login</a></li>
+									            <li class="col-md-12 no-padding"><a href="register.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Register</a></li>
+																						                             
+				                            </ul>
+		                          </li>
+		                          
+	                             <li class="col-md-12 no-padding"> 
+
+	                             <br>
+		                          </li>
+	                             
+	                            </ul>
+							    
+						    </div>
+       
+        </div>
+        
+        
+        <div class=" col-md-10 col-sm-8 content">
+          <h1 class="page-header"><i class="fa fa-check-square-o"></i> Forms </h1>
+			<ol class="breadcrumb">
+			  <li><a href="dashboard.html">Dashboard</a></li>
+			  <li class="active">Forms</li>
+			</ol>
+			
+	
+			
+			<div class="row">
+			
+				<div class="col-md-6">
+				
+				<div class="panel panel-primary">
+			      <div class="panel-heading">
+			        <h3 class="panel-title"> Basic Form</h3>
+			      </div>
+			      <div class="panel-body">
+			    
+					<form role="form">
+					  <div class="form-group">
+					    <label for="exampleInputEmail1">Email address</label>
+					    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputPassword1">Password</label>
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					  </div>
+					  <div class="form-group">
+					    <label for="exampleInputFile">File input</label>
+					    <input type="file" id="exampleInputFile">
+					    <p class="help-block">Example block-level help text here.</p>
+					  </div>
+					  <div class="checkbox">
+					    <label>
+					      <input type="checkbox"> Check me out
+					    </label>
+					  </div>
+					  <button type="submit" class="btn btn-primary pull-left">Submit</button>
+					</form>
+					
+				 </div>
+			    </div>		
+				
+				
+				<div class="panel panel-primary">
+			      <div class="panel-heading">
+			        <h3 class="panel-title"> Height sizing</h3>
+			      </div>
+			      <div class="panel-body">
+						<form role="form">
+						
+					      <div class="controls">
+					        <input class="form-control input-lg" type="text" placeholder=".input-lg">
+					        <br>
+					        <input type="text" class="form-control" placeholder="Default input">
+					         <br>
+					        <input class="form-control input-sm" type="text" placeholder=".input-sm">
+					
+					         <br>
+					        <select class="form-control input-lg">
+					          <option value="">.input-lg</option>
+					        </select>
+					        
+					         <br>
+					         
+					        <select class="form-control">
+					          <option value="">Default select</option>
+					        </select>
+					        
+					         <br>
+					        
+					        <select class="form-control input-sm">
+					          <option value="">.input-sm</option>
+					        </select>
+					        
+					      </div>
+					    </form>
+					   <hr>
+						<form class="form-horizontal" role="form">
+						  <div class="form-group form-group-lg">
+						    <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+						    <div class="col-sm-10">
+						      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+						    </div>
+						  </div>
+						  <div class="form-group form-group-sm">
+						    <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+						    <div class="col-sm-10">
+						      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+						    </div>
+						  </div>
+						</form>
+					    
+					    
+				</div>
+				</div>
+				
+				
+				<div class="box box-primary">
+                                <div class="box-header">
+                                    <h3 class="box-title">Select</h3>
+                                </div>
+                                <div class="box-body padding">
+                                    
+                                   	 <form role="form">
+                                   	 
+                                   	 	<div class="row">
+	                                   	 <div class="form-group col-md-12">
+						  					<select class="form-control">
+									            <option value="">Select a person...</option>
+												<option value="4">Thomas Edison</option>
+												<option value="1">Nikola</option>
+												<option value="3">Nikola Tesla</option>
+												<option value="5">Arnold Schwarzenegger</option>
+									        </select>
+								        </div>
+								        </div>
+								        
+								        <div class="row">
+								        <div class="form-group col-md-8">
+						  					<select class="form-control">
+									            <option value="">Select a person...</option>
+												<option value="4">Thomas Edison</option>
+												<option value="1">Nikola</option>
+												<option value="3">Nikola Tesla</option>
+												<option value="5">Arnold Schwarzenegger</option>
+									        </select>
+								        </div>
+								        </div>
+								        
+								        <div class="row">
+								        <div class="form-group col-md-6">
+						  					<select class="form-control">
+									            <option value="">Select a person...</option>
+												<option value="4">Thomas Edison</option>
+												<option value="1">Nikola</option>
+												<option value="3">Nikola Tesla</option>
+												<option value="5">Arnold Schwarzenegger</option>
+									        </select>
+								        </div>
+								        </div>
+								        
+								        <div class="row">
+								        <div class="form-group col-md-4">
+						  					<select class="form-control">
+									            <option value="">Select a person...</option>
+												<option value="4">Thomas Edison</option>
+												<option value="1">Nikola</option>
+												<option value="3">Nikola Tesla</option>
+												<option value="5">Arnold Schwarzenegger</option>
+									        </select>
+								        </div>
+								        </div>
+								        
+									 </form>
+
+                                </div>
+                            </div>
+                
+                <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Width Size</h3>
+                                </div>
+                                <div class="box-body padding">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" placeholder=".col-xs-3">
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <input type="text" class="form-control" placeholder=".col-xs-4">
+                                        </div>
+                                        <div class="col-xs-5">
+                                            <input type="text" class="form-control" placeholder=".col-xs-5">
+                                        </div>
+                                    </div>
+                                </div>
+                   </div>
+               
+               <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Input Addon</h3>
+                                </div>
+                                <div class="box-body padding">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">@</span>
+                                        <input type="text" class="form-control" placeholder="Username">
+                                    </div>
+                                    <br>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon">.00</span>
+                                    </div>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">$</span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon">.00</span>
+                                    </div>
+
+                                    <h4>With icons</h4>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                        <input type="text" class="form-control" placeholder="Email">
+                                    </div>
+                                    <br>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                                    </div>
+                                    <br>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-addon"><i class="fa fa-ambulance"></i></span>
+                                    </div>
+                                    
+                                    
+						
+                                    <h4>With checkbox and radio inputs</h4>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                		<input type="checkbox">    
+                                                </span>
+                                                <input type="text" class="form-control">
+                                            </div><!-- /input-group -->
+                                        </div><!-- /.col-lg-6 -->
+                                        <div class="col-lg-6">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+													<input type="radio">
+                                                </span>
+                                                <input type="text" class="form-control">
+                                            </div><!-- /input-group -->
+                                        </div><!-- /.col-lg-6 -->
+                                    </div><!-- /.row -->
+
+                                    <h4>With buttons</h4>
+                                    <p class="margin">Large: <code>.input-group.input-group-lg</code></p>
+                                    <div class="input-group input-group-lg">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Action <span class="fa fa-caret-down"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Separated link</a></li>
+                                            </ul>
+                                        </div><!-- /btn-group -->
+                                        <input type="text" class="form-control">
+                                    </div><!-- /input-group -->
+                                    <p class="margin">Normal</p>
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <button type="button" class="btn btn-danger">Action</button>
+                                        </div><!-- /btn-group -->
+                                        <input type="text" class="form-control">
+                                    </div><!-- /input-group -->
+                                    <p class="margin">Small <code>.input-group.input-group-sm</code></p>
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-info btn-flat" type="button">Go!</button>
+                                        </span>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+               
+                          
+				</div>
+			
+	
+                        <div class="col-md-6">
+                       
+                           
+                           <div class="box box-danger">
+                                <div class="box-header">
+                                    <h3 class="box-title">Checkbox & Radio icheck</h3>
+                                </div>
+                                <div class="box-body padding">
+                                    <div class="row">
+  
+   									<!-- checkbox -->
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox" class="minimal" checked/>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" class="minimal"/>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" class="minimal" disabled/>
+                                            Minimal skin checkbox
+                                        </label>
+                                    </div>
+
+                                    <!-- radio -->
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="radio" name="r1" class="minimal" checked/>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="r1" class="minimal"/>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="r1" class="minimal" disabled/>
+                                            Minimal skin radio
+                                        </label>
+                                    </div>
+
+                                    <!-- Minimal red style -->
+
+                                    <!-- checkbox -->
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox" class="minimal-red" checked/>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" class="minimal-red"/>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" class="minimal-red" disabled/>
+                                            Minimal red skin checkbox
+                                        </label>
+                                    </div>
+
+                                    <!-- radio -->
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="radio" name="r2" class="minimal-red" checked/>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="r2" class="minimal-red"/>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="r2" class="minimal-red" disabled/>
+                                            Minimal red skin radio
+                                        </label>
+                                    </div>
+
+                                    <!-- Minimal red style -->
+
+                                    <!-- checkbox -->
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="checkbox" class="flat-red" checked/>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" class="flat-red"/>
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" class="flat-red" disabled/>
+                                            Flat red skin checkbox
+                                        </label>
+                                    </div>
+
+                                    <!-- radio -->
+                                    <div class="form-group">
+                                        <label>
+                                            <input type="radio" name="r3" class="flat-red" checked/>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="r3" class="flat-red"/>
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="r3" class="flat-red" disabled/>
+                                            Flat red skin radio
+                                        </label>
+                                    </div>
+                                    
+                                    
+								 <div class="row">
+								 
+									 <div class="col-md-3">
+										<input type="checkbox" class="line">
+										<label>Checkbox 1</label>
+										</br>
+										<input type="checkbox" class="line" checked>
+										<label>Checkbox 2</label>
+										</br>
+										<input type="checkbox" class="line" checked>
+										<label>Checkbox 3</label>
+									 </div>
+									 
+									 <div class="col-md-3">
+										<input type="checkbox" class="line-blue">
+										<label>Checkbox 1</label>
+										</br>
+										<input type="checkbox" class="line-blue" checked>
+										<label>Checkbox 2</label>
+									 </div>
+									
+									 <div class="col-md-3">
+									 
+										<input type="radio" name="iCheck" class="line-red">
+										<label>Radio button 1</label>
+										</br>
+										<input type="radio" name="iCheck" class="line-red" checked>
+										<label>Radio button 2</label>
+										</br>
+										<input type="radio" name="iCheck" class="line-red" checked>
+										<label>Radio button 3</label>
+									 
+									 </div>
+									 <div class="col-md-3">
+									 
+										<input type="radio" name="iCheck" class="line-purple">
+										<label>True</label>
+										</br>
+										<input type="radio" name="iCheck" class="line-purple" checked>
+										<label>False</label>
+									 
+									 </div>
+								 
+								 </div>
+                                 <div class="clearfix"></div>
+								<br>
+								<a href="assets/plugins/iCheck-master/demo/index.html" target="_blank">icheck demo</a>
+								 
+								 <div class="clearfix"></div>
+
+								 <h3>Toggle button</h3>
+<input type="checkbox" checked data-toggle="toggle" data-size="large">
+<input type="checkbox" checked data-toggle="toggle" data-size="normal">
+<input type="checkbox" checked data-toggle="toggle" data-size="small">
+<input type="checkbox" checked data-toggle="toggle" data-size="mini">
+
+<div class="clearfix"></div><hr>
+
+<input type="checkbox" checked data-toggle="toggle" data-onstyle="primary">
+<input type="checkbox" checked data-toggle="toggle" data-onstyle="success">
+<input type="checkbox" checked data-toggle="toggle" data-onstyle="info">
+<input type="checkbox" checked data-toggle="toggle" data-onstyle="warning">
+<input type="checkbox" checked data-toggle="toggle" data-onstyle="danger">
+<input type="checkbox" checked data-toggle="toggle" data-onstyle="default">
+
+<div class="clearfix"></div><hr>
+
+<input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger">
+<input type="checkbox" checked data-toggle="toggle" data-onstyle="warning" data-offstyle="info">
+
+<div class="clearfix"></div><hr>
+
+<style>
+  .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px; }
+  .toggle.ios .toggle-handle { border-radius: 20px; }
+</style>
+<input type="checkbox" checked data-toggle="toggle" data-style="ios">
+<style>
+  .toggle.android { border-radius: 0px;}
+  .toggle.android .toggle-handle { border-radius: 0px; }
+</style>
+<input type="checkbox" checked data-toggle="toggle" data-style="android" data-onstyle="info">
+
+<div class="clearfix"></div><hr>
+
+   <pre name="code" class="js">
+   
+   <script>
+  $(function() {
+    $('#toggle-event').change(function() {
+ 		 alert('Toggle: ' + $(this).prop('checked'));
+    })
+  })
+</script>
+   </pre>
+
+   
+   <div class="clearfix"></div><hr>
+   
+<input type="checkbox" checked data-toggle="toggle" data-on="Ready" data-off="Not Ready" data-onstyle="success" data-offstyle="danger">
+
+<div class="clearfix"></div><hr>
+
+<input type="checkbox" checked data-toggle="toggle" data-on="<i class='fa fa-play'></i> Play" data-off="<i class='fa fa-pause'></i> Pause">
+
+<div class="clearfix"></div><hr>
+
+<input type="checkbox" checked data-toggle="toggle" data-on="Hello<br>World" data-off="Goodbye<br>World">
+
+<div class="clearfix"></div><hr>
+
+<a href="assets/plugins/bootstrap-toggle-master/index.html" target="_blank">more view</a>
+
+   
+
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                           
+                           
+			               <div class="panel panel-info">
+						      <div class="panel-heading">
+						        <h3 class="panel-title inline">Select</h3>
+						      </div>
+						      <div class="panel-body">
+						      
+						      
+						     
+						     <link rel="stylesheet" href="assets/plugins/select2-3.5.1/select2.css" />
+						    <script src="assets/plugins/select2-3.5.1/select2.js" type="text/javascript"></script>
+  							
+  							<script type="text/javascript">
+
+  							$(document).ready(function(){
+  								$("#selecy").select2({ maximumSelectionSize: 3 });
+
+  	  							});
+								
+
+  							</script>
+						    <form role="form">
+						    
+						    			<div class="form-group col-sm-12" >
+						    				<label for="selecy" class="col-sm-2 control-label">Select</label>
+									    	<select multiple class="col-sm-10" id="selecy">
+									            <option value="">Select a person...</option>
+												<option value="4">Thomas Edison</option>
+												<option value="1">Nikola</option>
+												<option value="3">Nikola Tesla</option>
+												<option value="5">Arnold Schwarzenegger</option>
+												<option value="">Select a person...</option>
+												<option value="4">Thomas Edison</option>
+												<option value="1">Nikola</option>
+												<option value="3">Nikola Tesla</option>
+												<option value="5">Arnold Schwarzenegger</option>
+									        </select>
+								        </div>
+						     </form>
+						     
+						     </div>
+						    </div>
+                           
+                           <div class="box box-primary">
+						      <div class="box-header">
+						        <h3 class="box-title">Date & Time </h3>
+						      </div>
+						      <div class="box-body">
+						      
+								<!-- Date and time range -->
+                                    <div class="form-group">
+                                        <label>Date and time range:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-clock-o"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservationtime"/>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- Date range -->
+                                    <div class="form-group">
+                                        <label>Date range:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control pull-right" id="reservation"/>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Date and time range -->
+                                    <div class="form-group">
+                                        <label>Date range button:</label>
+                                        <div class="input-group">
+                                            <button class="btn btn-default pull-right" id="daterange-btn">
+                                                <i class="fa fa-calendar"></i> Date range picker
+                                                <i class="fa fa-caret-down"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- time Picker -->
+                                    <div class="bootstrap-timepicker">
+                                        <div class="form-group">
+                                            <label>Time picker:</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control timepicker"/>
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-clock-o"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+							</div>
+						    </div>
+						    
+						    <div class="box box-primary">
+						      <div class="box-header">
+						        <h3 class="box-title"> Color Picker</h3>
+						      </div>
+						      <div class="box-body">
+						      
+						      <div class="row">
+						      
+								<!-- Color Picker -->
+									<div class="form-group col-md-2">
+                                        <label>Color picker:</label>
+                                        <input type="text" class="form-control my-colorpicker1"/>
+                                    </div>
+                                
+                                    <!-- Color Picker -->
+                                    <div class="form-group col-md-12">
+                                        <label>Color picker with addon:</label>
+                                        <div class="input-group my-colorpicker2 col-md-2">
+                                            <input type="text" class="form-control"/>
+                                            <div class="input-group-addon">
+                                                <i></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                </div>    
+                                    
+							</div>
+						    </div>
+						    
+						    <div class="box box-primary">
+						      <div class="box-header">
+						        <h3 class="box-title"> Slider</h3>
+						      </div>
+						      <div class="box-body">
+						    	
+						    	<form role="form">
+						    	
+								  <div class="form-group">
+								    <label for="slider">Slider</label>
+								    <input type="text" id="slider" name="slider" value="" />
+								  </div>
+								  
+								  <br>
+								  <br>
+								  <br>
+
+								</form>      
+							</div>
+						    </div>
+							
+							<div class="box box-primary">
+						      <div class="box-header">
+						        <h3 class="box-title">Input Mask</h3>
+						      </div>
+						      <div class="box-body">
+						      
+								<!-- Date dd/mm/yyyy -->
+                                    <div class="form-group">
+                                        <label>Date masks:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                        </div>
+                                    </div>
+
+                                    <!-- Date mm/dd/yyyy -->
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            <input type="text" class="form-control" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask/>
+                                        </div>
+                                    </div>
+
+                                    <!-- phone mask -->
+                                    <div class="form-group">
+                                        <label>US phone mask:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-phone"></i>
+                                            </div>
+                                            <input type="text" class="form-control" data-inputmask='"mask": "(999) 999-9999"' data-mask/>
+                                        </div>
+                                    </div>
+
+                                    <!-- phone mask -->
+                                    <div class="form-group">
+                                        <label>Intl US phone mask:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-phone"></i>
+                                            </div>
+                                            <input type="text" class="form-control" data-inputmask="'mask': ['999-999-9999 [x99999]', '+099 99 99 9999[9]-9999']" data-mask/>
+                                        </div>
+                                    </div>
+
+                                    <!-- IP mask -->
+                                    <div class="form-group">
+                                        <label>IP mask:</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-laptop"></i>
+                                            </div>
+                                            <input type="text" class="form-control" data-inputmask="'alias': 'ip'" data-mask/>
+                                        </div>
+                                    </div>				      
+						        
+							</div>
+						    </div>
+                           
+                            
+
+                            
+                          </div>
+                        
+                        
+                        
+                       
+                    </div>
+        
+          
+          
+          
+        </div>
+      </div>
+   
+    </div>
+    
+  </body>
+</html>

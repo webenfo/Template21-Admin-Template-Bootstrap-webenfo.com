@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>File Manager</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome-4.2.0/css/font-awesome.min.css">
+    
+    <!-- simple sidebar-->
+    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+    
+    
+    <!-- Template 21 -->
+     <link href="assets/general.css" rel="stylesheet">
+    
+    
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.min-1.11.1.js"></script>
+    <script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/docs.min.js"></script> 
+    
+    
+    <script src="assets/general.js"></script>
+    
+    <!-- syntaxhighlighter -->
+    
+<link type="text/css" rel="stylesheet" href="assets/plugins/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css"></link>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shCore.js"></script>
+
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>
+<script language="javascript" src="assets/plugins/dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+
+
+
+<script language="javascript">
+$(document).ready(function(){
+
+//dp.SyntaxHighlighter.BloggerMode();
+dp.SyntaxHighlighter.HighlightAll('code');
+
+ 
+
+});
+</script>
+    
+      <!-- syntaxhighlighter -->  
+
+<!-- file manager -->
+     
+	
+	<script src="assets/plugins/elFinder-2.x/jquery/jquery-ui-1.10.1.custom.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/jquery/ui-themes/smoothness/jquery-ui-1.10.1.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+	
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/common.css"      type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/dialog.css"      type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/toolbar.css"     type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/navbar.css"      type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/statusbar.css"   type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/contextmenu.css" type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/cwd.css"         type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/quicklook.css"   type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/commands.css"    type="text/css">
+
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/fonts.css"       type="text/css">
+	<link rel="stylesheet" href="assets/plugins/elFinder-2.x/css/theme.css"       type="text/css">
+
+	<!-- elfinder core -->
+	<script src="assets/plugins/elFinder-2.x/js/elFinder.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/elFinder.version.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/jquery.elfinder.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/elFinder.resources.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/elFinder.options.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/elFinder.history.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/elFinder.command.js"></script>
+
+	<!-- elfinder ui -->
+	<script src="assets/plugins/elFinder-2.x/js/ui/overlay.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/workzone.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/navbar.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/dialog.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/tree.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/cwd.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/toolbar.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/button.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/uploadButton.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/viewbutton.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/searchbutton.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/sortbutton.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/panel.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/contextmenu.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/path.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/stat.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/ui/places.js"></script>
+
+	<!-- elfinder commands -->
+	<script src="assets/plugins/elFinder-2.x/js/commands/back.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/forward.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/reload.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/up.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/home.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/copy.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/cut.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/paste.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/open.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/rm.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/info.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/duplicate.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/rename.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/help.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/getfile.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/mkdir.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/mkfile.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/upload.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/download.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/edit.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/quicklook.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/quicklook.plugins.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/extract.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/archive.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/search.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/view.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/resize.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/commands/sort.js"></script>	
+	<script src="assets/plugins/elFinder-2.x/js/commands/netmount.js"></script>	
+
+	<!-- elfinder languages -->
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.ar.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.bg.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.ca.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.cs.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.de.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.el.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.en.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.es.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.fa.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.fr.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.hu.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.it.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.jp.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.ko.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.nl.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.no.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.pl.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.pt_BR.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.ru.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.sl.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.sv.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.tr.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.zh_CN.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.zh_TW.js"></script>
+	<script src="assets/plugins/elFinder-2.x/js/i18n/elfinder.vi.js"></script>
+
+	<!-- elfinder dialog -->
+	<script src="assets/plugins/elFinder-2.x/js/jquery.dialogelfinder.js"></script>
+
+	<!-- elfinder 1.x connector API support -->
+	<script src="assets/plugins/elFinder-2.x/js/proxy/elFinderSupportVer1.js"></script>
+
+	<!-- elfinder custom extenstions -->
+	<script src="assets/plugins/elFinder-2.x/extensions/jplayer/elfinder.quicklook.jplayer.js"></script>
+
+
+	<style type="text/css">
+		body { font-family:arial, verdana, sans-serif;}
+		.button {
+			width: 100px;
+			position:relative;
+			display: -moz-inline-stack;
+			display: inline-block;
+			vertical-align: top;
+			zoom: 1;
+			*display: inline;
+			margin:0 3px 3px 0;
+			padding:1px 0;
+			text-align:center;
+			border:1px solid #ccc;
+			background-color:#eee;
+			margin:1em .5em;
+			padding:.3em .7em;
+			border-radius:5px; 
+			-moz-border-radius:5px; 
+			-webkit-border-radius:5px;
+			cursor:pointer;
+		}
+/*
+		#dialog {
+			position:absolute;
+			left:50%;
+			top:1000px;
+		}
+*/
+	</style>
+
+	<script>
+		$(document).ready(function() {
+			$('#finder').elfinder({
+				// requestType : 'post',
+
+				// url : 'php/connector.php',
+				url : 'php/connector.php',
+				// transport : new elFinderSupportVer1(),
+				// getFileCallback : function(files, fm) {
+				// 	console.log(files);
+				// },
+				handlers : {
+                    select : function(event, elfinderInstance) {
+                        var selected = event.data.selected;
+						
+						if (selected.length) {
+							// console.log(elfinderInstance.file(selected[0]))
+						}
+						
+                    }
+                },
+				// handlers : {
+				// 	select : function(e) {
+				// 		console.log(e.data)
+				// 	}
+				// },
+				// onlyMimes : ['image', 'text/plain']
+				// sync : 20000,
+				lang : 'ru',
+				customData : {answer : 42},
+				// requestType : 'POST',
+				// rememberLastDir : false,
+				// ui : ['tree', 'toolbar'],
+				// ui : ['toolbar', 'path', 'stat'],
+				// commands : [],
+				// commandsOptions : {
+				// 	edit : {
+				// 		mimes : ['text/plain', 'text/html', 'text/javascript'],
+				// 		editors : [
+				// 			{
+				// 				mimes : ['text/html'],
+				// 				load : function(textarea) {
+				// 					tinyMCE.execCommand("mceAddControl", true, textarea.id);
+				// 				},
+				// 				close : function(textarea, instance) {
+				// 					tinyMCE.execCommand('mceRemoveControl', false, textarea.id);
+				// 				},
+				// 				save : function(textarea, editor) {
+				// 					textarea.value = tinyMCE.get(textarea.id).selection.getContent({format : 'html'});
+				// 					tinyMCE.execCommand('mceRemoveControl', false, textarea.id);
+				// 				}
+				// 
+				// 			}
+				// 		]
+				// 	}
+				// }
+				// uiOptions : {
+				// 	toolbar : [['help']]
+				// }
+			})
+
+			// $('#finder2').elfinder({
+			// 	url : 'connectors/php/connector.php',
+			// 	width:650,
+			// 	lang : 'ru'
+			// })
+
+			// console.log(f1)
+			// 
+			// setTimeout(function() {
+			// 	console.log($('#finder').elfinder('instance'))
+			// }, 2000)
+
+			// new elFinder($('<div/>'))
+
+			// var f2 = $('#asd').elfinder({
+			// 	url : 'connectors/php/connector.php',
+			// 	lang : 'ru'
+			// }).elfinder('instance')
+			
+			$('#back').click(function(e) {
+				f1.exec('back')
+			})
+			$('#fwd').click(function(e) {
+				f1.exec('forward')
+			})
+
+			$('#dialog').click(function() {
+				var fm = $('<div/>').dialogelfinder({
+					url : 'php/connector.php',
+					lang : 'en',
+					width : 840,
+					destroyOnClose : true,
+					getFileCallback : function(files, fm) {
+						console.log(files);
+					},
+					commandsOptions : {
+						getfile : {
+							oncomplete : 'close',
+							folders : true
+						}
+					}
+				}).dialogelfinder('instance');
+			});
+
+		});
+	</script>
+     
+     
+     
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-logo" href="dashboard.html"><i class="fa fa-smile-o"></i>Template21</a>
+          <small class="plotm3">Admin Panel</small>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          
+            <li><a href="dashboard.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+            <li class="dropdown ">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-triangle text-red"></i> <span class="badge bg-red">21</span> <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu" style="width: 300px; height: 277px; overflow-y: scroll;">
+						
+							<div class="alert alert-danger" role="alert">
+						      <strong>404 page not found !</strong> in index page.
+						    </div>
+						    <div class="alert alert-warning" role="alert">
+						      <strong>Warning!</strong> Mail was not send.
+						    </div>
+						    <div class="alert alert-success" role="alert">
+						      <strong>Well done!</strong> You successfully read this important alert message.
+						    </div>
+						    <div class="alert alert-info" role="alert">
+						      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+						    </div>
+						    <div class="alert alert-warning" role="alert">
+						      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+						    </div>
+						    <div class="alert alert-danger" role="alert">
+						      <strong>404 page not found !</strong> Change a few things up and try submitting again.
+						    </div>
+				
+	          </ul>
+	        </li>
+	       	<li><a href="#"><i class="fa fa-question"></i> Help</a></li>
+	       	
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#"><i class="fa fa-user text-red"></i> My Profile</a></li>
+	            <li><a href="#"><i class="fa fa-cog text-red"></i> My settings</a></li>
+	            <li><a href="#"> <i class="fa fa-envelope text-red"></i> My Mail <span class="badge bg-red">21</span></a></li>
+	            <li class="divider"></li>
+	            <li><a href="#"><i class="fa fa-sign-out text-red"></i> Logout</a></li>
+	          </ul>
+	        </li>
+          </ul>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+      
+        <div class="col-md-2 col-sm-4 no-padding">
+        
+        <!-- Sidebar -->
+         <div class="col-md-10 no-padding menu-template21 bg-black">
+			          
+			         <br>
+			        <div class="col-md-12">
+	          				<div class="pull-left image">
+	                            <img src="img/zaz-talents.jpg" class="img-circle" width="90" alt="User Image">
+	                        </div>
+	                        <div class="pull-left info">
+	                            <p class="text-red">Hello, Zaz</p>
+	
+	                            <i class="fa fa-circle text-success"></i><a href="#" class="text-white"> Online</a>
+	                        </div>
+            		</div>
+            			<div class="clearfix"></div>
+			         
+								<ul class="col-md-12 dropdown-t21 no-padding">
+								
+								 <li class="col-md-12 no-padding"><hr></li>
+		                          
+							    <li class="col-md-12 no-padding"><a href="dashboard.html" class="col-md-12 text-menua"> <i class="fa fa-home"></i> Dashboard</a></li>
+					            <li class="col-md-12 no-padding"><a href="panels.html" class="col-md-12 text-menua"><i class="fa fa-square-o"></i> Grid & Panels</a></li>
+					            <li class="col-md-12 no-padding"><a href="tables.html" class="col-md-12 text-menua"><i class="fa fa-table"></i> Tables</a></li>
+					            <li class="col-md-12 no-padding"><a href="forms.html" class="col-md-12 text-menua"><i class="fa fa-check-square-o"></i> Forms</a> </li>
+					            <li class="col-md-12 no-padding"><a href="validator.html" class="col-md-12 text-menua"><i class="fa fa-check"></i> Form Validator & Wizard</a></li>
+					            <li class="col-md-12 no-padding"><a href="ploting.html" class="col-md-12 text-menua"><i class="fa fa-bar-chart"></i> Chart & Graph</a></li>
+					           	<li class="col-md-12 no-padding"><a href="maps.html" class="col-md-12 text-menua"><i class="fa fa-map-marker"></i> Maps</a></li>
+							                          
+		                          <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> UI ELEMENTS<i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+				                              	<li class="col-md-12 no-padding"><a href="icons_buttons.html" class="col-md-12 text-menua"><i class="fa fa-angellist"></i> icons & Buttons</a></li>
+									            <li class="col-md-12 no-padding"><a href="images.html" class="col-md-12 text-menua"><i class="fa fa-image"></i> images</a></li>
+									            <li class="col-md-12 no-padding"><a href="typography.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Typography</a></li>
+									            <li class="col-md-12 no-padding"><a href="slider.html" class="col-md-12 text-menua"><i class="fa fa-arrows-h"></i> slider</a></li>
+									            <li class="col-md-12 no-padding"><a href="notifications.html" class="col-md-12 text-menua"><i class="fa fa-warning"></i> Notifications</a></li>
+									            <li class="col-md-12 no-padding"><a href="drag_drop_sortable.html" class="col-md-12 text-menua"><i class="fa fa-bars""></i> Drag & Drop & Sortable</a></li>
+									            <li class="col-md-12 no-padding"><a href="group_list.html" class="col-md-12 text-menua"><i class="fa fa-bars""></i> Group list</a></li>
+									            <li class="col-md-12 no-padding"><a href="modals.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Modals</a></li>
+									            <li class="col-md-12 no-padding"><a href="tabs_wizards.html" class="col-md-12 text-menua"><i class="fa fa-th"></i> Tabs & Wizards & Accordion</a></li>
+													                             
+				                            </ul>
+		                          </li>
+		                          
+		                           <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> COMPONENTS <i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+												<li class="col-md-12 no-padding"><a href="calender.html" class="col-md-12 text-menua"><i class="fa fa-calendar"></i> Calendar</a></li>
+									            <li class="col-md-12 no-padding"><a href="mailbox.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mailbox<i class="fa fa-angle-down col-md-1 text-menua pull-right"></i></a>
+									            
+												       <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+														
+												            <li class="col-md-12 no-padding"><a href="mail_compose.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mail Compose</a></li>
+												            <li class="col-md-12 no-padding"><a href="mail_detail.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mail Detail</a></li>	
+												            									                             
+							                            </ul>
+									            </li><li class="col-md-12 no-padding"><a href="chat.html" class="col-md-12 text-menua"><i class="fa fa-wechat"></i> Chat</a></li>
+									            <li class="col-md-12 no-padding"><a href="galery.html" class="col-md-12 text-menua"><i class="fa fa-photo"></i> Galery</a></li>
+									            <li class="col-md-12 no-padding"><a href="blog.html" class="col-md-12 text-menua"><i class="fa fa-folder-o"></i> Blog</a></li>
+									            <li class="col-md-12 no-padding menu_active"><a href="file_manager.html" class="col-md-12 text-menua"><i class="fa fa-file"></i> File Manager</a></li>
+																						                             
+				                            </ul>
+		                          </li>
+		                          <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> PAGES <i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+				                              	
+									            <li class="col-md-12 no-padding"><a href="blank.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+									            <li class="col-md-12 no-padding"><a href="page_404.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> 404 Page</a></li>
+									            <li class="col-md-12 no-padding"><a href="login.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Login</a></li>
+									            <li class="col-md-12 no-padding"><a href="register.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Register</a></li>
+																						                             
+				                            </ul>
+		                          </li>
+		                          
+	                             <li class="col-md-12 no-padding"> 
+
+	                             <br>
+		                          </li>
+	                             
+	                            </ul>
+							    
+						    </div>
+       
+        </div>
+        <div class=" col-md-10 col-sm-8  content">
+          <h1 class="page-header"> <i class="fa fa-file"></i> File Manager </h1>
+			<ol class="breadcrumb">
+			  <li><a href="dashboard.html">Dashboard</a></li>
+			  <li class="active">File Manager</li>
+			</ol>
+			
+			<div class="row padding">
+				
+				<div id="back" class="button">back</div>
+				<div id="fwd" class="button">forward</div>
+				<div id="dialog" class="button">dialog</div>
+				<!-- <div id="close"  class="button">close</div>
+				<div id="dock" class="button">dock</div>
+				<div id="undock" class="button">undock</div>-->
+				<!-- <div style="width:670px; float:left"> -->
+					<div id="finder">finder <span>here</span></div>
+				<!-- </div> -->
+				<!-- <div style="width:670px; float:left">
+					<div id="finder2">finder</div> 
+				</div> -->
+				<br clear="all"/>
+				<input type="text" value="123" />
+				<input type="text" value="456" />
+			
+				<!-- <div><input type="text" id="i1"></div> -->
+				<!-- <div><input type="text" id="i2"></div> -->
+			
+			</div>
+			
+        </div>
+      </div>
+      
+      
+    </div>
+
+   
+  </body>
+</html>

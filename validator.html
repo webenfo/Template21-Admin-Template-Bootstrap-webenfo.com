@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Form Validator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.2.0/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome-4.2.0/css/font-awesome.min.css">
+    
+    <!-- simple sidebar-->
+    <link href="assets/css/simple-sidebar.css" rel="stylesheet">
+    
+    
+    <!-- Template 21 -->
+     <link href="assets/general.css" rel="stylesheet">
+     
+     
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.min-1.11.1.js"></script>
+    <script src="bootstrap-3.2.0/js/bootstrap.min.js"></script>
+    <script src="assets/js/docs.min.js"></script>
+     
+     
+     
+     
+     <script src="assets/plugins/validator/jquery.validate.js"></script>
+	<script>
+	$.validator.setDefaults({
+		submitHandler: function() {
+			alert("submitted!");
+		}
+	});
+
+	$().ready(function() {
+		// validate the comment form when it is submitted
+		$("#form").validate();
+
+		// validate signup form on keyup and submit
+		$("#form1").validate({
+			rules: {
+				firstname: {
+					required: true,
+					minlength: 2
+				},
+				lastname: "required",
+				username: {
+					required: true,
+					minlength: 2
+				},
+				password: {
+					required: true,
+					minlength: 5
+				},
+				repassword: {
+					required: true,
+					minlength: 5,
+					equalTo: "#password"
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				url: {
+					required: true,
+					url: true
+				},
+				message: {
+					required: true,
+					minlength: 21
+				},
+				agree: "required"
+			},
+			messages: {
+				firstname: "Please enter your firstname",
+				lastname: "Please enter your lastname",
+				username: {
+					required: "Please enter a username",
+					minlength: "Your username must consist of at least 2 characters"
+				},
+				password: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long"
+				},
+				repassword: {
+					required: "Please provide a password",
+					minlength: "Your password must be at least 5 characters long",
+					equalTo: "Please enter the same password as above"
+				},
+				email: "Please enter a valid email address",
+				agree: "Please accept our policy"
+			}
+		});
+
+		// propose username by combining first- and lastname
+		$("#username").focus(function() {
+			var firstname = $("#firstname").val();
+			var lastname = $("#lastname").val();
+			if (firstname && lastname && !this.value) {
+				this.value = firstname + "." + lastname;
+			}
+		});
+
+		//code to hide topic selection, disable for demo
+		var newsletter = $("#newsletter");
+		// newsletter topics are optional, hide at first
+		var inital = newsletter.is(":checked");
+		var topics = $("#newsletter_topics")[inital ? "removeClass" : "addClass"]("gray");
+		var topicInputs = topics.find("input").attr("disabled", !inital);
+		// show when newsletter is checked
+		newsletter.click(function() {
+			topics[this.checked ? "removeClass" : "addClass"]("gray");
+			topicInputs.attr("disabled", !this.checked);
+		});
+	});
+	</script>
+     
+     
+     
+     <!-- twitter-bootstrap-wizard-master -->
+     
+     <link href="assets/plugins/twitter-bootstrap-wizard-master/prettify.css" rel="stylesheet">
+     
+     <script src="assets/plugins/twitter-bootstrap-wizard-master/jquery.bootstrap.wizard.js"></script>
+     <script src="assets/plugins/twitter-bootstrap-wizard-master/prettify.js"></script>
+     
+	<script>
+	$(document).ready(function() {
+		var $validator = $("#commentForm").validate({
+		  rules: {
+		    emailfield: {
+		      required: true,
+		      email: true,
+		      minlength: 3
+		    },
+		    namefield: {
+		      required: true,
+		      minlength: 3
+		    },
+		    urlfield: {
+		      required: true,
+		      minlength: 3,
+		      url: true
+		    }
+		  }
+		});
+
+	  	$('#rootwizard').bootstrapWizard({
+	  		'tabClass': 'nav nav-pills',
+	  		'onNext': function(tab, navigation, index) {
+	  			var $valid = $("#commentForm").valid();
+	  			if(!$valid) {
+	  				$validator.focusInvalid();
+	  				return false;
+	  			}
+	  		}
+	  	});	
+		window.prettyPrint && prettyPrint()
+	});	
+	</script>
+     
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-logo" href="dashboard.html"><i class="fa fa-smile-o"></i>Template21</a>
+          <small class="plotm3">Admin Panel</small>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+          
+            <li><a href="dashboard.html"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+            <li class="dropdown ">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-triangle text-red"></i> <span class="badge bg-red">21</span> <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu" style="width: 300px; height: 277px; overflow-y: scroll;">
+						
+							<div class="alert alert-danger" role="alert">
+						      <strong>404 page not found !</strong> in index page.
+						    </div>
+						    <div class="alert alert-warning" role="alert">
+						      <strong>Warning!</strong> Mail was not send.
+						    </div>
+						    <div class="alert alert-success" role="alert">
+						      <strong>Well done!</strong> You successfully read this important alert message.
+						    </div>
+						    <div class="alert alert-info" role="alert">
+						      <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+						    </div>
+						    <div class="alert alert-warning" role="alert">
+						      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+						    </div>
+						    <div class="alert alert-danger" role="alert">
+						      <strong>404 page not found !</strong> Change a few things up and try submitting again.
+						    </div>
+				
+	          </ul>
+	        </li>
+	       	<li><a href="#"><i class="fa fa-question"></i> Help</a></li>
+	       	
+	        <li class="dropdown">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i> <span class="caret"></span></a>
+	          <ul class="dropdown-menu" role="menu">
+	            <li><a href="#"><i class="fa fa-user text-red"></i> My Profile</a></li>
+	            <li><a href="#"><i class="fa fa-cog text-red"></i> My settings</a></li>
+	            <li><a href="#"> <i class="fa fa-envelope text-red"></i> My Mail <span class="badge bg-red">21</span></a></li>
+	            <li class="divider"></li>
+	            <li><a href="#"><i class="fa fa-sign-out text-red"></i> Logout</a></li>
+	          </ul>
+	        </li>
+          </ul>
+        
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+      
+        <div class="col-md-2 col-sm-4 no-padding">
+        
+        <!-- Sidebar -->
+         <div class="col-md-10 no-padding menu-template21 bg-black">
+			          
+			         <br>
+			        <div class="col-md-12">
+	          				<div class="pull-left image">
+	                            <img src="img/zaz-talents.jpg" class="img-circle" width="90" alt="User Image">
+	                        </div>
+	                        <div class="pull-left info">
+	                            <p class="text-red">Hello, Zaz</p>
+	
+	                            <i class="fa fa-circle text-success"></i><a href="#" class="text-white"> Online</a>
+	                        </div>
+            		</div>
+            			<div class="clearfix"></div>
+			         
+								<ul class="col-md-12 dropdown-t21 no-padding">
+								
+								 <li class="col-md-12 no-padding"><hr></li>
+		                          
+							    <li class="col-md-12 no-padding"><a href="dashboard.html" class="col-md-12 text-menua"> <i class="fa fa-home"></i> Dashboard</a></li>
+					            <li class="col-md-12 no-padding"><a href="panels.html" class="col-md-12 text-menua"><i class="fa fa-square-o"></i> Grid & Panels</a></li>
+					            <li class="col-md-12 no-padding"><a href="tables.html" class="col-md-12 text-menua"><i class="fa fa-table"></i> Tables</a></li>
+					            <li class="col-md-12 no-padding"><a href="forms.html" class="col-md-12 text-menua"><i class="fa fa-check-square-o"></i> Forms</a> </li>
+					            <li class="col-md-12 no-padding menu_active"><a href="validator.html" class="col-md-12 text-menua"><i class="fa fa-check"></i> Form Validator & Wizard</a></li>
+					            <li class="col-md-12 no-padding"><a href="ploting.html" class="col-md-12 text-menua"><i class="fa fa-bar-chart"></i> Chart & Graph</a></li>
+					           	<li class="col-md-12 no-padding"><a href="maps.html" class="col-md-12 text-menua"><i class="fa fa-map-marker"></i> Maps</a></li>
+							                          
+		                          <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> UI ELEMENTS<i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+				                              	<li class="col-md-12 no-padding"><a href="icons_buttons.html" class="col-md-12 text-menua"><i class="fa fa-angellist"></i> icons & Buttons</a></li>
+									            <li class="col-md-12 no-padding"><a href="images.html" class="col-md-12 text-menua"><i class="fa fa-image"></i> images</a></li>
+									            <li class="col-md-12 no-padding"><a href="typography.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Typography</a></li>
+									            <li class="col-md-12 no-padding"><a href="slider.html" class="col-md-12 text-menua"><i class="fa fa-arrows-h"></i> slider</a></li>
+									            <li class="col-md-12 no-padding"><a href="notifications.html" class="col-md-12 text-menua"><i class="fa fa-warning"></i> Notifications</a></li>
+									            <li class="col-md-12 no-padding"><a href="drag_drop_sortable.html" class="col-md-12 text-menua"><i class="fa fa-bars""></i> Drag & Drop & Sortable</a></li>
+									            <li class="col-md-12 no-padding"><a href="group_list.html" class="col-md-12 text-menua"><i class="fa fa-bars""></i> Group list</a></li>
+									            <li class="col-md-12 no-padding"><a href="modals.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Modals</a></li>
+									            <li class="col-md-12 no-padding"><a href="tabs_wizards.html" class="col-md-12 text-menua"><i class="fa fa-th"></i> Tabs & Wizards & Accordion</a></li>
+													                             
+				                            </ul>
+		                          </li>
+		                          
+		                           <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> COMPONENTS <i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+												<li class="col-md-12 no-padding"><a href="calender.html" class="col-md-12 text-menua"><i class="fa fa-calendar"></i> Calendar</a></li>
+									            <li class="col-md-12 no-padding"><a href="mailbox.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mailbox<i class="fa fa-angle-down col-md-1 text-menua pull-right"></i></a>
+									            
+												       <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+														
+												            <li class="col-md-12 no-padding"><a href="mail_compose.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mail Compose</a></li>
+												            <li class="col-md-12 no-padding"><a href="mail_detail.html" class="col-md-12 text-menua"><i class="fa fa-envelope"></i> Mail Detail</a></li>	
+												            									                             
+							                            </ul>
+									            </li><li class="col-md-12 no-padding"><a href="chat.html" class="col-md-12 text-menua"><i class="fa fa-wechat"></i> Chat</a></li>
+									            <li class="col-md-12 no-padding"><a href="galery.html" class="col-md-12 text-menua"><i class="fa fa-photo"></i> Galery</a></li>
+									            <li class="col-md-12 no-padding"><a href="blog.html" class="col-md-12 text-menua"><i class="fa fa-folder-o"></i> Blog</a></li>
+									            <li class="col-md-12 no-padding"><a href="file_manager.html" class="col-md-12 text-menua"><i class="fa fa-file"></i> File Manager</a></li>
+																						                             
+				                            </ul>
+		                          </li>
+		                          <li class="col-md-12 no-padding"><hr></li>
+		                           
+	                             <li class="col-md-12 no-padding"> <a href="#" class="col-md-12 text-menua pull-left"> 
+	                             <i class="fa fa-angle-right"></i> PAGES <i class="fa fa-angle-down col-md-1 text-menua pull-right"></i> </a>
+					                        <ul class="dropdown-t21 col-md-12 no-padding" style="display:block;">
+											
+				                              	
+									            <li class="col-md-12 no-padding"><a href="blank.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+									            <li class="col-md-12 no-padding"><a href="page_404.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> 404 Page</a></li>
+									            <li class="col-md-12 no-padding"><a href="login.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Login</a></li>
+									            <li class="col-md-12 no-padding"><a href="register.html" class="col-md-12 text-menua"><i class="fa fa-circle-o"></i> Register</a></li>
+																						                             
+				                            </ul>
+		                          </li>
+		                          
+	                             <li class="col-md-12 no-padding"> 
+
+	                             <br>
+		                          </li>
+	                             
+	                            </ul>
+							    
+						    </div>
+       
+        </div>
+        <div class=" col-md-10 col-sm-8  content">
+          <h1 class="page-header"><i class="fa fa-check"></i> Form Validation</h1>
+			<ol class="breadcrumb">
+			  <li><a href="dashboard.html">Dashboard</a></li>
+			  <li class="active">Form Validation</li>
+			</ol>
+			
+			<div class="row">
+			
+				<div class="col-md-6">
+				<div class="panel panel-primary">
+				      <div class="panel-heading">
+				        <h3 class="panel-title"> Basic Form</h3>
+				      </div>
+				      <div class="panel-body">
+				      
+					    
+						<form role="form" id="form1">
+						<div class="col-md-6">	
+							  <div class="form-group">
+							    <label for="firstname">Name</label>
+							    <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter ">
+							  </div>
+							
+							  <div class="form-group">
+							    <label for="password">Password</label>
+							    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+							  </div>
+							  
+							  <div class="form-group">
+							    <label for="repassword">Re-Password</label>
+							    <input type="password" class="form-control" name="repassword" id="repassword" placeholder="Re-Password">
+							  </div>
+							  
+							  
+							
+						</div>
+						
+						<div class="col-md-6">
+							
+							  <div class="form-group">
+							    <label for="email">Email</label>
+							    <input type="email" class="form-control" name="email"  id="email" placeholder="Enter email">
+							  </div>
+							  
+							  <div class="form-group">
+							    <label for="url">Website</label>
+							    <input type="url" class="form-control" name="url" id="url" placeholder="Enter url">
+							  </div>
+							  
+							  <div class="form-group">
+							    <label for="message">Message</label>
+							    <textarea class="form-control" name="message"  id="message" rows="3" ></textarea>
+							  </div>
+							  
+							  
+							
+						</div>
+						
+						<div class="col-md-12">
+						
+							  <div class="form-group">
+							    <label for="input_file">File input</label>
+							    <input type="file" id="input_file">
+							    <p class="help-block">Example block-level help text here.</p>
+							  </div>
+							  
+							  
+							 
+							  <div class="checkbox">
+							  
+							   <label for="agree"> <input type="checkbox" id="agree" name="agree">  I Agree  </label>
+							    
+							  </div>
+							  
+							  <button type="submit" class="btn btn-primary pull-right">Submit</button>
+						</div>
+						
+						</form>
+						
+						
+					 </div>
+				    </div>
+				
+				</div>
+				
+				<div class="col-md-6 ">
+				
+				<div class="panel panel-primary">
+				      <div class="panel-heading">
+				        <h3 class="panel-title"> Form Wizard with Validator</h3>
+				      </div>
+				      <div class="panel-body ">		
+			
+							<form id="commentForm" method="get" action="" class="form-horizontal">
+							<div id="rootwizard">
+								<ul>
+								  	<li><a href="#tab1" data-toggle="tab">Contact</a></li>
+									<li><a href="#tab2" data-toggle="tab">Website Url</a></li>
+									<li><a href="#tab3" data-toggle="tab">Third</a></li>
+								</ul>
+								
+								<form role="form" id="form1">
+								<div class="tab-content padding">
+								
+								    <div class="tab-pane col-md-6" id="tab1">
+								    	<div class="form-group">
+										    <label class="" for="email">Email</label>
+										    <div class="controls">
+										      <input type="text" id="emailfield" name="emailfield" class="form-control required email">
+										    </div>
+										  </div>
+							 
+										  <div class="form-group">
+										    <label class="" for="name">Name</label>
+										    <div class="controls">
+										      <input type="text" id="namefield" name="namefield" class="form-control required">
+										    </div>
+										  </div>
+								    </div>
+								    <div class="tab-pane col-md-6" id="tab2">
+								      <div class="form-group">
+										    <label class="" for="url">URL</label>
+										    <div class="controls">
+										      <input type="text" id="urlfield" name="urlfield" class="form-control required url">
+										    </div>
+										  </div>
+								    </div>
+									<div class="tab-pane col-md-6" id="tab3">
+										3
+								    </div>
+								    <div class="row">
+								    	<div class="col-md-12">
+									    	<ul class="pager wizard">
+												<li class="previous first" style="display:none;"><a href="#">First</a></li>
+												<li class="previous"><a href="#">Previous</a></li>
+												<li class="next last" style="display:none;"><a href="#">Last</a></li>
+											  	<li class="next"><a href="#">Next</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>	
+								</form>
+							</div>
+							</form>
+			
+			
+						<a href="tabs_wizards.html">full wizard</a>
+			
+				</div>
+				</div>
+				
+					
+					</div>
+				
+			</div>
+          
+          
+        </div>
+      </div>
+      
+      
+    </div>
+
+    
+  </body>
+</html>
